@@ -1,0 +1,80 @@
+
+# 🧠 Avaliação Fuzzy de Desempenho Acadêmico
+
+Este projeto implementa um sistema especialista baseado em lógica fuzzy para avaliar o **desempenho acadêmico** de um estudante com base em três critérios: **nota**, **participação** e **qualidade dos projetos**.
+
+## 📋 Descrição
+
+Utilizando o sistema de inferência fuzzy com o pacote `scikit-fuzzy`, o programa classifica o desempenho do aluno em uma escala de 0 a 100, resultando em uma das seguintes categorias:
+
+- **Insuficiente** (0 a 39)
+- **Regular** (40 a 69)
+- **Bom** (70 a 89)
+- **Excelente** (90 a 100)
+
+A classificação considera as seguintes variáveis de entrada:
+- `notas`: Avaliação geral do aluno (0 a 10)
+- `participação`: Engajamento e presença (0 a 10)
+- `projetos`: Nível de complexidade dos trabalhos realizados (0 a 10)
+
+## 🧮 Lógica Fuzzy
+
+Cada variável de entrada é dividida em níveis:
+
+- **Notas**: baixa, média, alta
+- **Participação**: baixa, média, alta
+- **Projetos**: simples, médio, complexo
+
+Combinando essas variáveis, o sistema aplica **regras fuzzy** para inferir o desempenho final.
+
+## 🚀 Como executar
+
+1. **Pré-requisitos**:
+   - Python 3.x
+   - Biblioteca `scikit-fuzzy`:
+     ```bash
+     pip install scikit-fuzzy
+     ```
+
+2. **Executar o código**:
+   ```bash
+   python "Avaliação Fuzzy de Desempenho Acadêmico.py"
+   ```
+
+3. **Interaja com o sistema**:
+   - Informe os valores solicitados de **nota**, **participação** e **qualidade dos projetos**.
+   - O sistema calculará o desempenho final e exibirá a classificação correspondente.
+
+## 📊 Exemplo de uso
+
+```
+--- Avaliação Fuzzy de Desempenho Acadêmico ---
+
+Nota (0 a 10): 7.5
+
+Participação (0 a 10):
+  0 a 4   → baixa
+  4 a 7   → média
+  7 a 10  → alta
+Digite o nível de participação: 8
+
+Projetos (0 a 10):
+  0 a 4   → simples
+  4 a 7   → médio
+  7 a 10  → complexo
+Digite a qualidade/complexidade dos projetos: 9
+
+Desempenho calculado: 85.33 (em uma escala de 0 a 100)
+Classificação: bom
+```
+
+## 🛠️ Estrutura do Código
+
+- **Definições Fuzzy**: Antecedentes e consequente definidos com funções de pertinência.
+- **Regras Fuzzy**: Base de conhecimento usando `ctrl.Rule`.
+- **Simulação**: Recebe os valores do usuário, processa e exibe o resultado.
+- **Classificação final**: Função `classificar_desempenho` mapeia o valor fuzzy para níveis linguísticos.
+
+## 📎 Licença
+
+Este projeto é de uso livre para fins educacionais e acadêmicos.
